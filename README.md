@@ -19,38 +19,19 @@ Category (Optional): A string dimension (e.g., Team Name) to color-code the dots
 Once you run the query, select "Football Pitch" from the visualization dropdown menu.
 
 # Installation
-1. Add the Visualization to Your Looker Project (Recommended)
-This method bundles the visualization directly with your project for easy version control and deployment.
+
+Add the Visualization to Your Looker Project 
 
 Place the visualization's JavaScript file (e.g., pitch.js) in the root of your LookML project.
 
 In your project's main manifest.lkml file, add the following visualization block:
-
-lkml
-project_name: "your_project_name"
-
-visualization: {
-  id: "js-football-pitch"
-  label: "Football Pitch"
-  file: "pitch.js"
-}
+    project_name: "your_project_name"
+    
+    visualization: {
+      id: "js-football-pitch"
+      label: "Football Pitch"
+      file: "pitch.js"
+    }
 Deploy your project. The visualization will now be available to all users within that project.
 
-2. Alternative: Add via Admin Panel
-For quick testing or instances where you cannot modify LookML projects.
 
-Host the pitch.js file on a web server (e.g., GitHub Pages).
-
-In Looker, go to Admin > Platform > Visualizations.
-
-Click Add Visualization.
-
-Fill in the details:
-
-ID: js-football-pitch
-
-Label: Football Pitch
-
-Main URL: The full URL to your hosted pitch.js file.
-
-Click Save. The visualization will appear in your visualization list.
