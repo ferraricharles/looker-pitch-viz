@@ -1,0 +1,54 @@
+Looker Football Pitch Custom Visualization
+A custom visualization for Looker built with pure JavaScript to plot coordinate-based data onto a football (soccer) pitch. This allows you to visualize player positions, events, or any other data that has X and Y coordinates directly within a Looker Explore.
+
+This visualization requires no external dependencies or backend services.
+
+(screenshot)
+
+How to Use
+To use this visualization, your Looker Explore query must contain at least two dimensions in the following order:
+
+X Coordinate: A numeric dimension representing the horizontal position (ideally from 0 to 105).
+
+Y Coordinate: A numeric dimension representing the vertical position (ideally from 0 to 68).
+
+Category (Optional): A string dimension (e.g., Team Name) to color-code the dots.
+
+Once you run the query, select "Football Pitch" from the visualization dropdown menu.
+
+Installation
+1. Add the Visualization to Your Looker Project (Recommended)
+This method bundles the visualization directly with your project for easy version control and deployment.
+
+Place the visualization's JavaScript file (e.g., pitch.js) in the root of your LookML project.
+
+In your project's main manifest.lkml file, add the following visualization block:
+
+lkml
+project_name: "your_project_name"
+
+visualization: {
+  id: "js-football-pitch"
+  label: "Football Pitch"
+  file: "pitch.js"
+}
+Deploy your project. The visualization will now be available to all users within that project.
+
+2. Alternative: Add via Admin Panel
+For quick testing or instances where you cannot modify LookML projects.
+
+Host the pitch.js file on a web server (e.g., GitHub Pages).
+
+In Looker, go to Admin > Platform > Visualizations.
+
+Click Add Visualization.
+
+Fill in the details:
+
+ID: js-football-pitch
+
+Label: Football Pitch
+
+Main URL: The full URL to your hosted pitch.js file.
+
+Click Save. The visualization will appear in your visualization list.
