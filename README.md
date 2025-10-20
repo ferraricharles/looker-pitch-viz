@@ -1,11 +1,13 @@
 Looker Football Pitch Custom Visualization
+
 A custom visualization for Looker built with pure JavaScript to plot coordinate-based data onto a football (soccer) pitch. This allows you to visualize player positions, events, or any other data that has X and Y coordinates directly within a Looker Explore.
 
 This visualization requires no external dependencies or backend services.
 
-(screenshot)
+<img width="962" height="615" alt="image" src="https://github.com/user-attachments/assets/bf31e708-f973-46ef-a989-63bc5a48cfec" />
 
-How to Use
+
+# How to Use
 To use this visualization, your Looker Explore query must contain at least two dimensions in the following order:
 
 X Coordinate: A numeric dimension representing the horizontal position (ideally from 0 to 105).
@@ -16,7 +18,7 @@ Category (Optional): A string dimension (e.g., Team Name) to color-code the dots
 
 Once you run the query, select "Football Pitch" from the visualization dropdown menu.
 
-Installation
+# Installation
 1. Add the Visualization to Your Looker Project (Recommended)
 This method bundles the visualization directly with your project for easy version control and deployment.
 
